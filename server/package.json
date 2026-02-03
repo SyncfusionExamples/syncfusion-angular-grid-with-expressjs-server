@@ -1,0 +1,34 @@
+{
+  "name": "hospital-patient-management-server",
+  "version": "1.0.0",
+  "description": "Express.js backend for Hospital Patient Management with Syncfusion EJ2 Angular DataGrid",
+  "main": "server.ts",
+  "type": "commonjs",
+  "scripts": {
+    "start": "ts-node server.ts",
+    "dev": "nodemon --exec ts-node server.ts",
+    "build": "tsc",
+    "start:prod": "node dist/server.js"
+  },
+  "keywords": [
+    "express",
+    "typescript",
+    "hospital",
+    "patient-management",
+    "rest-api"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/cors": "^2.8.17",
+    "@types/node": "^20.10.6",
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.2",
+    "nodemon": "^3.0.2"
+  }
+}
