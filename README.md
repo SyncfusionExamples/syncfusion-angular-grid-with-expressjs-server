@@ -4,6 +4,7 @@ A lightweight, production-ready pattern for binding **Express.js** server data t
 
 ## Key Features
 
+- **Express.js Server Backend**: TypeScript-based RESTful API for robust server-side data processing
 - **Syncfusion Angular Grid**: Built-in search, filter, sort, and paging capabilities
 - **Complete CRUD Operations**: Add, edit, delete, and update records directly from the grid
 
