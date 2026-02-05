@@ -11,7 +11,7 @@ import {
   EditSettingsModel,
   ToolbarItems
 } from '@syncfusion/ej2-angular-grids';
-import { DataManager, UrlAdaptor, WebApiAdaptor } from '@syncfusion/ej2-data';
+import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 
 /**
  * Interface for Patient data structure
@@ -79,57 +79,6 @@ export class PatientsGridComponent implements OnInit {
   public filterSettings = { type: 'Excel' };
 
   /**
-   * Blood group dropdown options
-   */
-  public bloodGroupParams = {
-    params: {
-      dataSource: ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'],
-      fields: { text: 'value', value: 'value' }
-    }
-  };
-
-  /**
-   * Gender dropdown options
-   */
-  public genderParams = {
-    params: {
-      dataSource: ['Male', 'Female', 'Other'],
-      fields: { text: 'value', value: 'value' }
-    }
-  };
-
-  /**
-   * Department dropdown options
-   */
-  public departmentParams = {
-    params: {
-      dataSource: [
-        'Cardiology',
-        'Neurology',
-        'Orthopedics',
-        'Pediatrics',
-        'Emergency',
-        'Oncology',
-        'Dermatology',
-        'General Surgery',
-        'Gynecology',
-        'Psychiatry'
-      ],
-      fields: { text: 'value', value: 'value' }
-    }
-  };
-
-  /**
-   * Status dropdown options
-   */
-  public statusParams = {
-    params: {
-      dataSource: ['In Treatment', 'Discharged', 'Critical', 'Recovering', 'Scheduled'],
-      fields: { text: 'value', value: 'value' }
-    }
-  };
-
-  /**
    * Validation rules for form fields
    */
   public validationRules = {
@@ -144,18 +93,12 @@ export class PatientsGridComponent implements OnInit {
   ngOnInit(): void {
     /**
      * Initialize DataManager with UrlAdaptor
-     * This automatically handles:
-     * - GET requests with skip/take for pagination
-     * - Sorting and filtering parameters
-     * - POST for insert
-     * - PUT for update
-     * - DELETE for delete
      */
     this.dataManager = new DataManager({
-      url: 'http://localhost:3000/api/patients',
-      insertUrl: 'http://localhost:3000/api/patients',
-      updateUrl: 'http://localhost:3000/api/patients',
-      removeUrl: 'http://localhost:3000/api/patients',
+      url: 'http://localhost:5000/api/patients',
+      insertUrl: 'http://localhost:5000/api/patients/create',
+      updateUrl: 'http://localhost:5000/api/patients/update',
+      removeUrl: 'http://localhost:5000/api/patients/remove',
       adaptor: new UrlAdaptor(),
       crossDomain: true
     });
