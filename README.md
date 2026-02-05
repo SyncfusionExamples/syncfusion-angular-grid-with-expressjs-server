@@ -96,4 +96,4 @@ A lightweight, production-ready pattern for binding **Express.js** server data t
 2. Click again to sort descending
 
 ## Reference
-For detailed information, refer to the [Syncfusion Angular Grid documentation](https://ej2.syncfusion.com/angular/documentation/grid/overview).
+For detailed information, refer to the [Syncfusion Angular Grid documentation](https://ej2.syncfusion.com/angular/documentation/grid/getting-started).
